@@ -13,10 +13,10 @@
     </div>
     <div class="nav-links">
       <div>
-        <a [routerLink]="['/']" class="">Home</a>
+        <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="">Home</a>
       </div>
       <div>
-        <a [routerLink]="['/register']" class="">Register</a>
+        <a [routerLink]="['/register']" routerLinkActive="active" class="">Register</a>
       </div>
     </div>
   </nav>

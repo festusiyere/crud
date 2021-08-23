@@ -31,6 +31,10 @@
     a {
       display: inline-block;
       margin: 0 1rem;
+
+      &.active {
+        color: $button-primary;
+      }
     }
 
     @include screen(small) {
