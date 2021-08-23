@@ -1,0 +1,40 @@
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid $bg-mint;
+
+  @include screen(small) {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .logo {
+    svg {
+      width: 100px;
+      height: auto;
+
+      @include screen(small) {
+        width: 70px;
+      }
+    }
+  }
+
+  .nav-links {
+    margin-left: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    @include screen(small) {
+      margin-right: 0;
+    }
+  }
+}

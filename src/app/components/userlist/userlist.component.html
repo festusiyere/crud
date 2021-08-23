@@ -1,0 +1,73 @@
+<div class="users-list">
+  <h5>Users</h5>
+  <ng-template [ngIf]="users && users?.length">
+    <div class="user-card" *ngFor="let user of users; let i = index">
+      <div class="name">
+        <div class="check value">
+          <input type="checkbox" (change)="updatePaidStatus($event, user, i)" [id]="user.name+i"
+            [checked]="user.hasPaid" />
+          <label class="checkbox" [for]="user.name+i"> &nbsp; </label>
+        </div>
+        <div>
+          <div class="label">
+            Name
+          </div>
+          <div class="value">
+            {{user.name}}
+          </div>
+
+        </div>
+      </div>
+      <div class="email">
+        <div class="label">
+          Email
+        </div>
+        <div class="value">
+          {{user.email}}
+        </div>
+      </div>
+      <div class="phone">
+        <div class="label">
+          Phone
+        </div>
+        <div class="value">
+          {{user.phone}}
+        </div>
+      </div>
+      <div class="dob">
+        <div class="label">
+          Date of Birth
+        </div>
+        <div class="value">
+          {{user.dob}}
+        </div>
+      </div>
+      <div class="status">
+        <div class="label">
+          Status
+        </div>
+        <div class="value" [ngClass]="{paid: user.hasPaid, pending: !user.hasPaid}">
+          {{user.hasPaid? 'Paid': 'Not Paid'}}
+        </div>
+      </div>
+      <div class="action">
+        <a [routerLink]="['user',user.id, 'edit']" routerLinkActive="router-link-active" class="button button--text">
+          Edit
+        </a>
+
+        <button (click)="deleteUser(user, i)" class="button--text  button--danger">
+          Delete
+        </button>
+
+      </div>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="users && !users?.length">
+    <div>No Users has been Added!</div>
+  </ng-template>
+
+  <ng-template [ngIf]="users == null">
+    <div class="loading">Loading...</div>
+  </ng-template>
+
+</div>

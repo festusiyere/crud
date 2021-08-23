@@ -1,0 +1,17 @@
+.registration-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+
+  &__card {
+    h5 {
+      margin-bottom: 1rem;
+    }
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+  }
+}

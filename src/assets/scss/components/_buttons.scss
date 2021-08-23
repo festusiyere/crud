@@ -1,0 +1,87 @@
+button,
+.button {
+  outline: 0;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em 1.7em;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.85rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 300ms;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition-property: background-color, opacity, color, transform, box-shadow;
+  transition-timing-function: ease-in-out;
+  user-select: none;
+  transform-style: preserve-3d;
+  will-change: background-color, opacity, color, box-shadow;
+  box-shadow: 0 2px 4px 0 rgba($button-primary, 0.08);
+
+  &:focus-visible {
+    outline: 1px dotted ButtonText;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.disabled {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+  }
+
+  &.button--primary {
+    background-color: $button-primary;
+    color: $bg-water;
+
+    &:hover {
+      box-shadow: 0 2px 10px 0px rgba($button-primary, 0.28);
+      background-color: lighten($button-primary, 3);
+    }
+  }
+
+  &.button--secondary {
+    background-color: $bg-water;
+    color: $black;
+    border: solid 2px #e0e0e0;
+    box-shadow: none;
+  }
+
+  &.button--uppercase {
+    text-transform: uppercase;
+  }
+
+  &.button--text {
+    background: none;
+    color: $button-primary;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  &.button--danger {
+    color: rgb(255, 58, 58);
+  }
+
+  &.button--full-width {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1em 1.7em;
+  }
+
+  &.button--has-spinner {
+    svg {
+      margin-right: 0.4em;
+      margin-bottom: -2px;
+      width: 1em !important;
+      height: auto !important;
+    }
+  }
+}

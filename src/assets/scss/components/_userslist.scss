@@ -1,0 +1,55 @@
+.users-list {
+  .user-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 11px 15px 0px rgba(0, 0, 0, 0.02);
+    margin-bottom: 1rem;
+
+    .name {
+      display: flex;
+      align-items: center;
+      .check {
+        margin-right: 1rem;
+        label {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .label {
+      color: rgb(189, 189, 189);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .value {
+      font-weight: 500;
+
+      &.paid {
+        color: #00b107;
+      }
+      &.pending {
+        color: #e69f43;
+      }
+    }
+
+    .action {
+      display: flex;
+    }
+
+    button,
+    .button {
+      align-items: center;
+      margin-right: 1rem;
+    }
+  }
+
+  .loading {
+    font-style: italic;
+    margin-top: 1rem;
+  }
+}

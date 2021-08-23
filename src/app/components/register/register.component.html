@@ -1,0 +1,53 @@
+<div class="registration-form">
+  <div class="registration-form__card">
+    <h5>
+
+      {{isEditMode? 'Edit User': 'Add Users'}}
+
+    </h5>
+    <div class="text-green" *ngIf="isSuccessful">
+      {{isEditMode? 'User Updated': 'User Added'}}
+    </div>
+    <form #registerForm="ngForm" (ngSubmit)="isEditMode? updateUser() :submitForm(registerForm)">
+
+      <div class="input-field__wrapper">
+        <label for="name">Name</label>
+        <input type="text" name="name" [(ngModel)]="data.name" required>
+      </div>
+
+
+      <div class="input-field__wrapper">
+        <label for="name">Business Name</label>
+        <input type="text" name="business_name" [(ngModel)]="data.business_name" required>
+      </div>
+
+
+      <div class="input-field__wrapper">
+        <label for="name">Email</label>
+        <input type="email" name="email" [(ngModel)]="data.email" required email>
+      </div>
+
+      <div class="input-field__wrapper">
+        <label for="name">Phone Number</label>
+        <input type="number" name="phone" [(ngModel)]="data.phone" required>
+      </div>
+
+
+      <div class="input-field__wrapper">
+        <label for="name">Date of Birth</label>
+        <input type="date" name="dob" [(ngModel)]="data.dob" required>
+      </div>
+
+
+      <p>
+        <button class="button--primary button--full-width" *ngIf="!isEditMode" type="submit"
+          [disabled]="registerForm.invalid">{{isLoading?
+          'Submitting...': 'Submit'}}</button>
+        <button class="button--primary button--full-width" *ngIf="isEditMode" type="submit"
+          [disabled]="registerForm.invalid">{{isLoading?
+          'Editing...': 'Edit'}}</button>
+      </p>
+
+    </form>
+  </div>
+</div>

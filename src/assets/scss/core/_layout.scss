@@ -1,0 +1,13 @@
+// Layout styles
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.page-content {
+  padding: 2rem 2rem;
+
+  @include screen(small) {
+    padding: 1rem 1rem;
+  }
+}

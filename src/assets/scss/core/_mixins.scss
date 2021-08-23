@@ -1,0 +1,40 @@
+// Mixin for media query
+$breakpoint-small: 600px;
+$breakpoint-med-small: 768px;
+$breakpoint-med: 1024px;
+$breakpoint-lg: 1440px;
+
+// Mixin for media queries
+@mixin screen($size, $type: max, $pixels: 600) {
+    @if $size== 'tiny' {
+        @media screen and (max-width: 400px) {
+            @content;
+        }
+    }
+    @if $size== 'small' {
+        @media screen and (max-width: $breakpoint-small) {
+            @content;
+        }
+    }
+    @if $size== 'med-small' {
+        @media screen and (max-width: $breakpoint-med-small) {
+            @content;
+        }
+    } @else if $size== 'med' {
+        @media screen and (max-width: $breakpoint-med) {
+            @content;
+        }
+    } @else if $size== 'mid' {
+        @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-med) {
+            @content;
+        }
+    } @else if $size== 'large' {
+        @media screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $size== 'custom' {
+        @media screen and (#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    }
+}
