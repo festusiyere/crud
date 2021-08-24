@@ -19,7 +19,7 @@ export class UserlistComponent implements OnInit {
 
   getAllUsers(): void {
     this.userService.getAllUsers().subscribe(users => {
-      this.users = users.sort((a, b) => {
+      this.users = users.reverse().sort((a, b) => {
         return (a.hasPaid === b.hasPaid) ? 0 : a.hasPaid ? -1 : 1
       })
     })

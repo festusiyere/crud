@@ -1,30 +1,4 @@
 {
   "users": [
-    {
-      "id": "83927f4a-541c-40af-9043-70e5ed292eb5",
-      "name": "ifeanyifestus@gmail.com",
-      "phone": 8168650657,
-      "business_name": "Juhla Companies",
-      "email": "ifeanyifestus@gmail.com",
-      "dob": "2021-08-14",
-      "hasPaid": false
-    },
-    {
-      "name": "Harmony now",
-      "phone": 1234543234,
-      "email": "harmony@gmail.com",
-      "business_name": "Harmonious now",
-      "dob": "2021-08-20",
-      "id": "d8dcd844-2ef1-46aa-b0d6-4f83e070230a"
-    },
-    {
-      "id": "127dc4d4-ca3d-4c10-978f-c9eeb635ee63",
-      "name": "Harmony Otagene",
-      "phone": 8484884844,
-      "business_name": "Harmonious group of companies",
-      "email": "harmony+1@gmail.com",
-      "dob": "2021-08-20",
-      "hasPaid": false
-    }
   ]
 }
